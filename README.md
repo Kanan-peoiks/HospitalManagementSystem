@@ -21,30 +21,30 @@ The system is built using layered architecture:
 3. Repository layer and follows best practices such as DTO usage, pagination, and global exception handling.
 
 🛠️ Technologies Used
-Java 17+
-Spring Boot
-Spring Data JPA
-Hibernate
-Lombok
+Java 17+,
+Spring Boot,
+Spring Data JPA,
+Hibernate,
+Lombok,
 PostgreSQL
 
 ⚠️ Exception Handling
 The project uses a GlobalExceptionHandler to handle:
-Patient not found
-Doctor not found
-Appointment conflicts
-Doctor availability issues
+Patient not found,
+Doctor not found,
+Appointment conflicts,
+Doctor availability issues,
 All exceptions return meaningful HTTP status codes and messages.
 
 ✅ Features Implemented
-✔ DTO (Request / Response)
-✔ CRUD operations
-✔ Pagination
-✔ Global Exception Handling
-✔ Entity relationships
+✔ DTO (Request / Response),
+✔ CRUD operations,
+✔ Pagination,
+✔ Global Exception Handling,
+✔ Entity relationships,
 ✔ Clean architecture
 
-📌 Author
-👤 Kanan Shukurzade
-📅 Year: 2026
+📌 Author 
+👤 Kanan Shukurzade 
+📅 Year: 2026 
 📚 Project Type: Educational / Learning & Practice Project
