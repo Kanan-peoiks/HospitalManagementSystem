@@ -11,5 +11,5 @@ public class PatientRequestDto {
     private String fullName;
     private String email;
     private String phoneNumber;
-
+     //FK private
 }
