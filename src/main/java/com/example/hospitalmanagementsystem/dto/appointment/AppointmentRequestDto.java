@@ -1,13 +1,13 @@
 package com.example.hospitalmanagementsystem.dto.appointment;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.time.LocalDateTime;
 
 @Data
-public class AppointmentResponseDto {
-
-    private Long id;
+@AllArgsConstructor
+public class AppointmentRequestDto {
     private LocalDateTime dateTime;
 }
