@@ -9,5 +9,5 @@ public class DoctorResponseDto {
     private Long id;
     private String doctorFullName;
     private String specialization;
-    private String available;
+    private boolean available;
 }

@@ -10,5 +10,5 @@ public class DoctorRequestDto {
 
     private String doctorFullName;
     private String specialization;
-    private String available;
+    private boolean available;
 }
