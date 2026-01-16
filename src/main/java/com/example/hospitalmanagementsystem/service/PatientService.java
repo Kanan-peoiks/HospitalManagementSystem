@@ -1,4 +1,7 @@
 package com.example.hospitalmanagementsystem.service;
 
-public class PatientService {
+import org.springframework.stereotype.Service;
+
+
+public interface PatientService {
 }
