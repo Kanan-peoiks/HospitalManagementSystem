@@ -1,4 +1,7 @@
 package com.example.hospitalmanagementsystem.exception;
 
-public class AppointmentAlreadyExistsException {
+public class AppointmentAlreadyExistsException extends RuntimeException {
+    public AppointmentAlreadyExistsException(String message) {
+        super(message);
+    }
 }
