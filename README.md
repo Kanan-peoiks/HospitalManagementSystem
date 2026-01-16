@@ -37,14 +37,14 @@ Doctor availability issues,
 All exceptions return meaningful HTTP status codes and messages.
 
 ✅ Features Implemented
-✔ DTO (Request / Response),
-✔ CRUD operations,
-✔ Pagination,
-✔ Global Exception Handling,
-✔ Entity relationships,
-✔ Clean architecture
+DTO (Request / Response),
+CRUD operations,
+Pagination,
+Global Exception Handling,
+Entity relationships,
+Clean architecture
 
-📌 Author 
-👤 Kanan Shukurzade 
-📅 Year: 2026 
+📌 Author: Kanan Shukurzade
+---
 📚 Project Type: Educational / Learning & Practice Project
+---
