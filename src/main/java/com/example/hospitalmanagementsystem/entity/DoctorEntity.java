@@ -5,6 +5,8 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
+import java.util.List;
+
 @Entity
 @Table(name = "doctors")
 @Data
@@ -14,19 +16,20 @@ public class DoctorEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
+    @Column(nullable = false)
     @Size(min = 3, max = 50)
     private String doctorFullName;
 
-    @NotBlank
+
+    @Column(nullable = false)
     @Size(min = 3, max = 50)
     private String specialization;
 
-    @NotBlank
+    @Column(nullable = false)
     @Size(min = 3, max = 50)
     private String available;
 
-
-
-
+    @OneToMany(mappedBy = "doctor", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<AppointmentEntity> appointments;
 }
+
