@@ -7,13 +7,17 @@ import com.example.hospitalmanagementsystem.repository.PatientRepository;
 import com.example.hospitalmanagementsystem.service.AppointmentService;
 import com.example.hospitalmanagementsystem.service.PatientService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
+import org.springframework.data.domain.Pageable;
+
+
 
 @Service
 @RequiredArgsConstructor
-class PatientImplService implements PatientService {
+public class PatientImplService implements PatientService {
 
-    private PatientRepository patientRepository;
+    final private PatientRepository patientRepository;
 
     @Override
     public PatientResponseDto create(PatientRequestDto patientRequestDto) {
@@ -36,6 +40,23 @@ class PatientImplService implements PatientService {
         patientResponseDto.setPhoneNumber(saved.getPhoneNumber());
 
         return patientResponseDto;
+    }
+
+
+    //Məqsəd: səhifələnmiş məlumatlar qaytarmaq
+    @Override
+    public Page<PatientResponseDto> getAll(Pageable pageable) {
+        //Entityden melumatlari aliriq
+        Page<PatientEntity> patientEntityPage = patientRepository.findAll(pageable);
+
+        return patientEntityPage.map(patientEntity -> {
+            PatientResponseDto patientResponseDto = new PatientResponseDto();
+            patientResponseDto.setId(patientEntity.getId());
+            patientResponseDto.setFullName(patientEntity.getFullName());
+            patientResponseDto.setEmail(patientEntity.getEmail());
+            patientResponseDto.setPhoneNumber(patientEntity.getPhoneNumber());
+            return patientResponseDto;
+        });
     }
 
     @Override

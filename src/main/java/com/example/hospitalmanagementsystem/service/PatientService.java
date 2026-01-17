@@ -2,12 +2,18 @@ package com.example.hospitalmanagementsystem.service;
 
 import com.example.hospitalmanagementsystem.dto.patient.PatientRequestDto;
 import com.example.hospitalmanagementsystem.dto.patient.PatientResponseDto;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
 import org.springframework.stereotype.Service;
+
 
 
 public interface PatientService {
 
     PatientResponseDto create (PatientRequestDto patientRequestDto);
+
+    Page<PatientResponseDto> getAll(Pageable pageable);
 
     PatientResponseDto getById(Long id);
 
